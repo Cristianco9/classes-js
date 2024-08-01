@@ -35,7 +35,7 @@ class StudentServices {
         } catch (err) {
             
             throw new Error(err);  
-            
+
         }
 
     }
@@ -43,6 +43,11 @@ class StudentServices {
     createOne(data) {
 
         try {
+
+            const newUser = data;
+            this.usersCreated.push(newUser);
+
+            return newUser;
 
         } catch (err) {
             
@@ -56,7 +61,25 @@ class StudentServices {
 
         try {
 
+            const userIndex = this.usersCreated.findIndex(
+                user => user.id === "id"
+            );
+
+            if(!userIndex) {
+                return null;
+            }
+
+            const userDeleted = this.usersCreated.splice(userIndex, 1);
+
+            if (!userDeleted) {
+                return null;
+            }
+
+            return userDeleted;
+
         } catch (err) {
+            
+            throw new Error(err); 
             
         }
 
