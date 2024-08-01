@@ -47,6 +47,10 @@ class StudentServices {
             const newUser = data;
             this.usersCreated.push(newUser);
 
+            if(!newUser) {
+                return null;
+            }
+
             return newUser;
 
         } catch (err) {
@@ -95,7 +99,7 @@ class StudentServices {
             const userUpdated = this.usersCreated[userIndex] = newData;
 
             return userUpdated;
-            
+
         } catch (err) {
             
             throw new Error(err); 
