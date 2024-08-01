@@ -92,8 +92,9 @@ class StudentServices {
     editOne(id, newData) {
 
         try {
+            
             const userIndex = this.usersCreated.findIndex(
-                user => user.id === "id"
+                user => user.id === id
             );
 
             const userUpdated = this.usersCreated[userIndex] = newData;
