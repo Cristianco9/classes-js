@@ -80,17 +80,26 @@ class StudentServices {
         } catch (err) {
             
             throw new Error(err); 
-            
+
         }
 
     }
 
-    editOne() {
+    editOne(id, newData) {
 
         try {
+            const userIndex = this.usersCreated.findIndex(
+                user => user.id === "id"
+            );
 
+            const userUpdated = this.usersCreated[userIndex] = newData;
+
+            return userUpdated;
+            
         } catch (err) {
             
+            throw new Error(err); 
+
         }
 
     }
