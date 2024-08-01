@@ -34,6 +34,8 @@ class StudentServices {
 
         } catch (err) {
             
+            throw new Error(err);  
+            
         }
 
     }
@@ -44,6 +46,8 @@ class StudentServices {
 
         } catch (err) {
             
+            throw new Error(err); 
+
         }
 
     }
