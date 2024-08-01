@@ -9,7 +9,7 @@ class StudentServices {
 
         try {
 
-            const theUser = this.usersCreated.find( user => user.id === "id" );
+            const theUser = this.usersCreated.find( user => user.id === id );
 
             if (!theUser) {
                 return null;
