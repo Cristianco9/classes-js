@@ -108,3 +108,6 @@ class StudentServices {
 
     }
 }
+
+
+export default StudentServices;
